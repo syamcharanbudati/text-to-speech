@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f7f7f3">
+		<title>Vocal - Text to Speech</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<main class="app-shell">
+			<header class="topbar">
+				<a class="brand" href="#" aria-label="Vocal home">
+					<span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>
+					<span>vocal<span class="brand-period">.</span></span>
+				</a>
+				<div class="topbar-note"><span class="live-dot"></span> Your words, spoken naturally</div>
+			</header>
+
+			<section class="workspace" aria-labelledby="page-title">
+				<div class="intro">
+					<p class="eyebrow">TEXT TO SPEECH <span>·</span> YOUR PERSONAL READER</p>
+					<h1 id="page-title">Give your words<br><span>a voice.</span></h1>
+					<p class="intro-copy">Turn anything you write into speech. Choose a voice, find your pace, and press play.</p>
+				</div>
+
+				<div class="reader-layout">
+					<section class="writing-panel" aria-label="Text to read aloud">
+						<div class="panel-heading">
+							<label for="text-input">Your text</label>
+							<button class="clear-button" id="clear-button" type="button" title="Clear text" aria-label="Clear text">Clear <span aria-hidden="true">×</span></button>
+						</div>
+						<textarea id="text-input" maxlength="5000" placeholder="Paste or type something you'd like to hear..." spellcheck="true"></textarea>
+						<div class="writing-footer">
+							<span id="text-hint">A little punctuation helps speech sound natural.</span>
+							<span class="character-count"><span id="character-count">0</span> / 5,000</span>
+						</div>
+						<div class="player-row">
+							<button class="speak-button" id="speak-button" type="button"><span class="play-icon" aria-hidden="true">▶</span><span id="speak-label">Read aloud</span></button>
+							<button class="icon-button" id="pause-button" type="button" title="Pause" aria-label="Pause" disabled><span aria-hidden="true">Ⅱ</span></button>
+							<button class="icon-button stop-button" id="stop-button" type="button" title="Stop" aria-label="Stop" disabled><span aria-hidden="true">■</span></button>
+							<div class="playback-status" role="status" aria-live="polite"><span class="status-dot"></span><span id="status-text">Ready when you are</span></div>
+						</div>
+					</section>
+
+					<aside class="settings-panel" aria-labelledby="settings-title">
+						<div class="settings-heading">
+							<div>
+								<p class="eyebrow">MAKE IT YOURS</p>
+								<h2 id="settings-title">Voice settings</h2>
+							</div>
+							<span class="settings-icon" aria-hidden="true">≋</span>
+						</div>
+
+						<label class="field-label" for="voice-select">Voice</label>
+						<select id="voice-select" aria-describedby="voice-help">
+							<option value="">Loading voices...</option>
+						</select>
+						<p class="field-help" id="voice-help">Available voices depend on your browser and device.</p>
+
+						<div class="slider-field">
+							<div class="slider-label-row"><label class="field-label" for="rate-range">Speed</label><output id="rate-value" for="rate-range">1.0×</output></div>
+							<input id="rate-range" type="range" min="0.5" max="2" step="0.1" value="1">
+							<div class="range-ends"><span>Slower</span><span>Faster</span></div>
+						</div>
+
+						<div class="slider-field pitch-field">
+							<div class="slider-label-row"><label class="field-label" for="pitch-range">Pitch</label><output id="pitch-value" for="pitch-range">1.0</output></div>
+							<input id="pitch-range" type="range" min="0.5" max="2" step="0.1" value="1">
+							<div class="range-ends"><span>Lower</span><span>Higher</span></div>
+						</div>
+
+						<div class="sound-wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+					</aside>
+				</div>
+
+				<footer class="page-footer"><span>Made for the joy of listening.</span><span>Runs right here in your browser <span class="footer-spark" aria-hidden="true">✳</span></span></footer>
+			</section>
+		</main>
+	</body>
+</html>
